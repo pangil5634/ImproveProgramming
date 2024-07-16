@@ -1,4 +1,4 @@
-package Java_Review.실전코딩.Class3;
+package Java.실전코딩.Class3;
 
 public class Car {
     private int speed;

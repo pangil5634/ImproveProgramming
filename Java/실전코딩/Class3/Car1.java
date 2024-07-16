@@ -1,4 +1,4 @@
-package Java_Review.실전코딩.Class3;
+package Java.실전코딩.Class3;
 
 public class Car1 {
     public static void main(String[] args) {

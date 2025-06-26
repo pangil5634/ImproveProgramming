@@ -1,0 +1,7 @@
+const numbers: number[] = [1, 2, 3, 4, 5];
+for (let index = 0; index < numbers.length; index++) {
+    const item = numbers[index];
+    console.log(item);
+}
+
+

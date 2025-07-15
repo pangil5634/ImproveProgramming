@@ -115,6 +115,7 @@ function checkBingo() {
     return count;
 }
 
+// 빙고 횟수 변수 초기화 
 let bingoCount = 0;
 
 // 빙고 게임 진행

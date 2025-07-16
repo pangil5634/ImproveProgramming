@@ -11,6 +11,9 @@
 
 //  문제 분석
 /*
+    - a층의 b호 인원 수 = 자신의 아래층(a-1)층의 1호부터 b호까지 사람들의 수의 합
+    - 0층의 i호에는 i명이 산다.
+
     - 3층 : 1 / 5 / 15 / 25 / 60  
     - 2층 : 1 / 4 / 10 / 20 / 35
     - 1층 : 1 / 3 / 6 / 10 / 15
@@ -108,17 +111,3 @@ function getMembers(testCase) {
 for (let i = 0; i < repeatCount; i++){
     console.log(getMembers(test[i]));
 }
-
-
-
-
-// // Top-Down 피보나치 (재귀 + 메모이제이션)
-// function fib(n, memo = {}) {
-//     if (n <= 1) return n;
-//     if (memo[n]) return memo[n];  // 이미 계산한 값 재사용
-
-//     memo[n] = fib(n - 1, memo) + fib(n - 2, memo);  // 저장
-//     return memo[n];
-// }
-
-// console.log(fib(10));  // 출력: 55

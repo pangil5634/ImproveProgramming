@@ -1,3 +1,5 @@
+package P1546;
+
 import java.util.Scanner;
 
 public class P1546 {

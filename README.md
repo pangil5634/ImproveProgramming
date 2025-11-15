@@ -29,19 +29,25 @@
 
 ## 🛠 사용 언어 비율
 
-- JavaScript: 57.8%
-- Java: 22.7%
-- TypeScript: 14.7%
-- C: 3.0%
-- Makefile 등 기타: 1.8%
+- JavaScript: 57.4%
+- Java: 24.8%
+- TypeScript: 14.0%
+- C: 3.8%
 
 ---
 
 ## 📈 커밋 방식
 
-- `study : DayX (스터디명)` — 스터디 중심 커밋
-- `solve PXXXXX (언어)` — 알고리즘 문제 풀이 기록
-- `edit:` 또는 `add:` — 기능/코드 수정 및 추가 기록
+이 저장소는 **[Conventional Commits](https://www.conventionalcommits.org/ko/v1.0.0/)** 명세를 따르며, 주요 타입은 다음과 같습니다.
+
+| 타입 | 설명 | 예시 |
+|------|------|------|
+| `feat` | 알고리즘 문제 풀이, 새로운 기능 추가 | `feat: solve BOJ 2447` |
+| `study`| 스터디 진행 및 학습 내용 정리 | `study: Day1 (WhyDev)` |
+| `docs` | README 등 문서 수정 | `docs: update commit conventions` |
+| `style`| 코드 포맷팅, 세미콜론 등 (기능 변경 없음) | `style: apply linter rules` |
+| `refactor`| 코드 리팩토링 | `refactor: improve readability of function` |
+| `chore`| 빌드, 패키지 매니저 설정 등 | `chore: add new dependency` |
 
 ---
 

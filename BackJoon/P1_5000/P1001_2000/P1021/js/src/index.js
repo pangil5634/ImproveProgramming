@@ -4,40 +4,28 @@ function printResult(input) {
   const arr = input.arr;
 
   let totalCount = 0;
-  let idx = 1;
 
   let numbers = Array.from({ length: N }).map((_, i) => i + 1);
 
   for (let i = 0; i < M; i++) {
+    // 대상 값과 index 구하기
     const target = arr[i]; // 대상
+    const indexTarget = numbers.indexOf(target);
 
-    // 현재 idx 값이 대상과 같은지 비교하기
-    if (idx !== target) {
-      // 같지 않으면, 현재 idx에서 대상까지 왼쪽과 오른쪽으로의 이동 횟수 구하기
-      let leftCount = 0;
-      let rightCount = 0;
-      let indexIdx = numbers.indexOf(idx);
-      let indexTarget = numbers.indexOf(target);
+    // 2번, 3번 연산 횟수 구하기
+    const leftCount = indexTarget; // 2번 연산 횟수
+    const rightCount = numbers.length - leftCount; // 3번 연산 횟수
 
-      if (indexIdx < indexTarget) {
-        rightCount = indexTarget - indexIdx;
-        leftCount = numbers.length - rightCount;
-      } else {
-        leftCount = indexIdx - indexTarget;
-        rightCount = numbers.length - leftCount;
-      }
+    // 총 연산 횟수에 최소 이동 횟수로 더하기
+    totalCount += Math.min(leftCount, rightCount);
 
-      // 더 작은 횟수를 총 이동거리에 더하기
-      const size = leftCount > rightCount ? rightCount : leftCount;
-      totalCount += size;
-    }
+    // target을 맨 앞으로 오게 회전
+    const rightArr = numbers.slice(indexTarget);
+    const leftArr = numbers.slice(0, indexTarget);
+    numbers = rightArr.concat(leftArr);
 
-    // idx를 다음 대상 위치로 이동하기
-    const targetIndex = numbers.indexOf(target);
-    idx = numbers[(targetIndex + 1) % numbers.length];
-
-    // 대상을 배열에서 지우기
-    numbers.splice(targetIndex, 1);
+    // 맨 앞(target) 제거
+    numbers.shift();
   }
 
   return totalCount;

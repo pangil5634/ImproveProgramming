@@ -1,0 +1,11 @@
+{
+  "version": "1.0.0",
+  "private": true,
+  "type": "commonjs",
+  "scripts": {
+    "test": "npx jest --runTestsByPath ./test/index.test.js --watchman=false"
+  },
+  "devDependencies": {
+    "jest": "^30.0.0"
+  }
+}
